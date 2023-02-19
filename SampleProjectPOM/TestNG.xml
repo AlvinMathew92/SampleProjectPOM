@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="My Test Suite" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="utilities.ExtentReportsUtils" />
+	</listeners>
+	<test name="My Test" >
+		<classes>
+			<class name="testCases.SampleTestCase" />
+		</classes>
+	</test>
+</suite>
