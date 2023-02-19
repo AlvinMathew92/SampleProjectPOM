@@ -19,6 +19,7 @@ public class SampleTestCase extends BaseClass {
 		lp.enterPassword("1q2w3e4r");
 		lp.clickLoginButton();
 		String expected = "CAROL THOMAS";
+		System.out.println("*******MyTest************");
 		String actual = hp.getTextofLoggedInUser();
 		Assert.assertEquals(actual, expected, "Invalid User Logged");
   }
