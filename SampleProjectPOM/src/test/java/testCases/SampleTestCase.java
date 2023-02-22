@@ -7,12 +7,12 @@ import elementRepository.HomePage;
 import elementRepository.LoginPage;
 
 public class SampleTestCase extends BaseClass {
-	
+
 	LoginPage lp;
 	HomePage hp;
- 
+
 	@Test
-  public void verifyTheXXXXXXXXFunctionality() {
+	public void verifyTheXXXXXXXXFunctionality() {
 		lp = new LoginPage(driver);
 		hp = new HomePage(driver);
 		lp.enterUserName("carol");
@@ -22,5 +22,18 @@ public class SampleTestCase extends BaseClass {
 		System.out.println("*******MyTest************");
 		String actual = hp.getTextofLoggedInUser();
 		Assert.assertEquals(actual, expected, "Invalid User Logged");
-  }
+	}
+
+	@Test
+	public void verifyTheYYYYYYYYFunctionality() {
+		lp = new LoginPage(driver);
+		hp = new HomePage(driver);
+		lp.enterUserName("carol");
+		lp.enterPassword("1q2w3e4r");
+		lp.clickLoginButton();
+		String expected = "CAROL THOMAS123";
+		System.out.println("*******MyTest************");
+		String actual = hp.getTextofLoggedInUser();
+		Assert.assertEquals(actual, expected, "Invalid User Logged");
+	}
 }
